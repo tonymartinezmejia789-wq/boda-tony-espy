@@ -9,40 +9,39 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background-color: #0a0a0a; color: #fff; font-family: 'Cormorant Garamond', serif; min-height: 100vh; overflow-x: hidden; }
     .stars { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; background: radial-gradient(ellipse at 20% 50%, rgba(180,30,30,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.08) 0%, transparent 50%); }
-    .container { position:relative; z-index:1; max-width:900px; margin:0 auto; padding:20px; }
-    .ornament { text-align:center; color:#C9A96E; font-size:1.2rem; letter-spacing:8px; margin-bottom:10px; opacity:0.7; }
-    .hero { width:100%; max-height:420px; object-fit:cover; object-position:center top; border:1px solid #C9A96E; border-radius:4px; display:block; margin:0 auto; box-shadow:0 0 40px rgba(201,169,110,0.2), 0 0 80px rgba(180,30,30,0.1); }
-    .names-block { text-align:center; padding:30px 20px 10px; }
-    .names-block::before, .names-block::after { content:''; display:block; width:60px; height:1px; background:linear-gradient(90deg,transparent,#C9A96E,transparent); margin:0 auto 16px; }
-    .names-block::after { margin:16px auto 0; }
-    .names { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,6vw,3.8rem); font-weight:400; color:#fff; letter-spacing:2px; text-shadow:0 0 30px rgba(201,169,110,0.4); }
+    .container { position:relative; z-index:1; max-width:900px; margin:0 auto; padding:16px; }
+    .ornament { text-align:center; color:#C9A96E; font-size:1rem; letter-spacing:8px; margin-bottom:10px; opacity:0.7; }
+    .hero { width:100%; max-height:380px; object-fit:cover; object-position:center top; border:1px solid #C9A96E; border-radius:4px; display:block; box-shadow:0 0 40px rgba(201,169,110,0.2); }
+    .names-block { text-align:center; padding:20px 16px 8px; }
+    .names-block::before { content:''; display:block; width:60px; height:1px; background:linear-gradient(90deg,transparent,#C9A96E,transparent); margin:0 auto 14px; }
+    .names { font-family:'Playfair Display',serif; font-size:clamp(2rem,8vw,3.8rem); font-weight:400; color:#fff; letter-spacing:2px; text-shadow:0 0 30px rgba(201,169,110,0.4); }
     .names span { color:#C9A96E; font-style:italic; }
-    .anniversary-badge { font-family:'Playfair Display',serif; font-size:clamp(0.9rem,2.5vw,1.1rem); color:#C9A96E; letter-spacing:6px; text-transform:uppercase; margin-top:8px; opacity:0.85; }
-    .details { text-align:center; padding:20px; background:rgba(201,169,110,0.05); border:1px solid rgba(201,169,110,0.2); border-radius:4px; margin:20px 0; }
-    .event-date { font-family:'Playfair Display',serif; font-size:clamp(1.4rem,4vw,2rem); color:#C9A96E; margin-bottom:12px; }
-    .detail-row { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:12px; }
-    .detail-label { font-size:0.7rem; letter-spacing:4px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:4px; }
-    .detail-value { font-size:0.95rem; color:#f0e8d8; line-height:1.4; }
-    .countdown-section { text-align:center; padding:20px; margin:10px 0; }
-    .countdown-label { font-size:0.7rem; letter-spacing:5px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:16px; }
-    .countdown { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-    .count-unit { text-align:center; min-width:60px; }
-    .count-number { font-family:'Playfair Display',serif; font-size:clamp(2rem,6vw,3.5rem); color:#fff; line-height:1; text-shadow:0 0 20px rgba(201,169,110,0.5); }
-    .count-text { font-size:0.6rem; letter-spacing:3px; text-transform:uppercase; color:#C9A96E; opacity:0.6; margin-top:4px; }
-    .count-sep { font-family:'Playfair Display',serif; font-size:2.5rem; color:#C9A96E; opacity:0.3; align-self:flex-start; padding-top:5px; }
-    .welcome { text-align:center; font-style:italic; font-size:clamp(1rem,2.5vw,1.25rem); color:#c0b090; padding:16px 30px; border-left:2px solid rgba(201,169,110,0.3); border-right:2px solid rgba(201,169,110,0.3); margin:20px auto; max-width:600px; line-height:1.8; }
-    .player-section { margin:20px 0; }
-    .player-label { text-align:center; font-size:0.7rem; letter-spacing:5px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:16px; }
+    .anniversary-badge { font-family:'Playfair Display',serif; font-size:clamp(0.75rem,3vw,1rem); color:#C9A96E; letter-spacing:4px; text-transform:uppercase; margin-top:6px; opacity:0.85; }
+    .rose-divider { text-align:center; font-size:1.2rem; margin:8px 0; opacity:0.5; }
+    .details { text-align:center; padding:16px 12px; background:rgba(201,169,110,0.05); border:1px solid rgba(201,169,110,0.2); border-radius:4px; margin:12px 0; }
+    .event-date { font-family:'Playfair Display',serif; font-size:clamp(1.1rem,4vw,1.8rem); color:#C9A96E; margin-bottom:10px; }
+    .detail-row { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+    .detail-label { font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:3px; }
+    .detail-value { font-size:0.85rem; color:#f0e8d8; line-height:1.4; }
+    .countdown-section { text-align:center; padding:16px 8px; margin:8px 0; }
+    .countdown-label { font-size:0.65rem; letter-spacing:5px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:12px; }
+    .countdown { display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:center; align-items:flex-start; gap:4px; width:100%; }
+    .count-unit { text-align:center; flex:1; max-width:80px; }
+    .count-number { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,8vw,3rem); color:#fff; line-height:1; text-shadow:0 0 20px rgba(201,169,110,0.5); }
+    .count-text { font-size:0.55rem; letter-spacing:2px; text-transform:uppercase; color:#C9A96E; opacity:0.6; margin-top:4px; }
+    .count-sep { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,6vw,2.5rem); color:#C9A96E; opacity:0.3; padding-top:2px; flex-shrink:0; }
+    .welcome { text-align:center; font-style:italic; font-size:clamp(0.95rem,3vw,1.2rem); color:#c0b090; padding:14px 20px; border-left:2px solid rgba(201,169,110,0.3); border-right:2px solid rgba(201,169,110,0.3); margin:12px auto; max-width:600px; line-height:1.8; }
+    .divider { text-align:center; color:#C9A96E; opacity:0.3; margin:14px 0; font-size:1rem; letter-spacing:10px; }
+    .player-section { margin:16px 0; }
+    .player-label { text-align:center; font-size:0.65rem; letter-spacing:5px; text-transform:uppercase; color:#C9A96E; opacity:0.7; margin-bottom:12px; }
     .player-wrapper { position:relative; width:100%; padding-top:56.25%; background:#0d0d0d; border:1px solid rgba(201,169,110,0.3); border-radius:4px; overflow:hidden; box-shadow:0 0 40px rgba(180,30,30,0.15); }
     .player-wrapper iframe, .player-wrapper .player-placeholder { position:absolute; top:0; left:0; width:100%; height:100%; }
-    .player-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; color:rgba(201,169,110,0.4); font-size:1rem; letter-spacing:3px; text-transform:uppercase; gap:12px; }
-    .player-placeholder .icon { font-size:3rem; opacity:0.3; }
-    .divider { text-align:center; color:#C9A96E; opacity:0.3; margin:20px 0; font-size:1.2rem; letter-spacing:12px; }
-    footer { text-align:center; padding:30px 20px; font-size:0.75rem; letter-spacing:3px; color:rgba(201,169,110,0.35); text-transform:uppercase; }
-    .rose-divider { text-align:center; font-size:1.4rem; margin:8px 0; opacity:0.5; }
-    .live-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(180,30,30,0.2); border:1px solid rgba(180,30,30,0.4); border-radius:20px; padding:4px 14px; font-size:0.7rem; letter-spacing:3px; text-transform:uppercase; color:#ff6b6b; margin-bottom:12px; }
+    .player-placeholder { display:flex; flex-direction:column; align-items:center; justify-content:center; color:rgba(201,169,110,0.4); font-size:0.85rem; letter-spacing:3px; text-transform:uppercase; gap:10px; }
+    .player-placeholder .icon { font-size:2.5rem; opacity:0.3; }
+    .live-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(180,30,30,0.2); border:1px solid rgba(180,30,30,0.4); border-radius:20px; padding:4px 14px; font-size:0.65rem; letter-spacing:3px; text-transform:uppercase; color:#ff6b6b; margin-bottom:10px; }
     .live-dot { width:7px; height:7px; background:#ff4444; border-radius:50%; animation:pulse 1.5s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
+    footer { text-align:center; padding:24px 20px; font-size:0.7rem; letter-spacing:3px; color:rgba(201,169,110,0.35); text-transform:uppercase; }
   </style>
 </head>
 <body>
@@ -67,7 +66,7 @@
           <div class="detail-value">6514 Western Ave<br/>Riverside, CA · 5:00 PM</div>
         </div>
         <div class="detail-item">
-          <div class="detail-label">Código de Vestimenta</div>
+          <div class="detail-label">Vestimenta</div>
           <div class="detail-value">Modern<br/>Blush & Gold</div>
         </div>
       </div>
@@ -88,20 +87,19 @@
     <div class="welcome">¡Gracias por acompañarnos en este día tan especial!</div>
     <div class="divider">— ✦ —</div>
     <div class="player-section">
-      <div style="text-align:center;margin-bottom:12px;">
+      <div style="text-align:center;margin-bottom:10px;">
         <span class="live-badge"><span class="live-dot"></span>En Vivo</span>
       </div>
       <div class="player-label">Transmisión en Vivo</div>
       <div class="player-wrapper">
         <!-- PEGA EL EMBED CODE DE YOLOCAST AQUÍ -->
-        <!-- Ejemplo: <iframe src="https://yolocast.io/embed/XXXX" width="100%" height="100%" frameborder="0" allowfullscreen></iframe> -->
         <div class="player-placeholder">
           <div class="icon">📡</div>
           <div>Transmisión próximamente</div>
         </div>
       </div>
     </div>
-    <div class="rose-divider" style="margin-top:30px;">🌹 🖤 🌹</div>
+    <div class="rose-divider" style="margin-top:24px;">🌹 🖤 🌹</div>
     <footer>Tony & Espy · 20 · VI · 2026 · Con amor</footer>
   </div>
   <script>
