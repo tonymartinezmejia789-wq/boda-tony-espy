@@ -9,25 +9,21 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { background-color: #0a0a0a !important; }
-
-    body {
+    html, body {
       background-color: #0a0a0a !important;
+      background: #0a0a0a !important;
       color: #ffffff;
       font-family: 'Cormorant Garamond', serif;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Nuclear option — override ANY injected background */
-    body > *:not(#page-bg) { position: relative; z-index: 1; }
-
     #page-bg {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background-color: #0a0a0a;
-      z-index: -1;
+      z-index: -2;
     }
 
     .stars {
@@ -35,7 +31,7 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       pointer-events: none;
-      z-index: 0;
+      z-index: -1;
       background: 
         radial-gradient(ellipse at 20% 50%, rgba(180,30,30,0.08) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.08) 0%, transparent 50%);
@@ -46,7 +42,7 @@
       z-index: 1;
       max-width: 900px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 8px 16px 16px 16px;
     }
 
     .ornament {
@@ -56,6 +52,7 @@
       letter-spacing: 8px;
       margin-bottom: 10px;
       opacity: 0.7;
+      padding-top: 8px;
     }
 
     .hero {
@@ -296,7 +293,6 @@
   </style>
 </head>
 <body>
-  <!-- Fixed black background layer — always behind everything -->
   <div id="page-bg"></div>
   <div class="stars"></div>
   <div class="container">
@@ -418,14 +414,12 @@
   </div>
 
   <script>
-    /* Force black background even if YoloCast overrides body styles */
     function enforceBackground() {
       document.body.style.setProperty('background-color', '#0a0a0a', 'important');
       document.body.style.setProperty('background', '#0a0a0a', 'important');
       document.documentElement.style.setProperty('background-color', '#0a0a0a', 'important');
     }
     enforceBackground();
-    /* Watch for any style changes YoloCast might inject */
     const observer = new MutationObserver(enforceBackground);
     observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
